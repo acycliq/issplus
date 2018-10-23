@@ -289,6 +289,7 @@ function sectionChart(data) {
     // add the overlay on top of everything to take the mouse events
     dotsGroup.append('rect')
         .attr('class', 'overlay')
+        .attr('id', 'sectionOverlay')
         .attr('width', sectionFeatures.width)
         .attr('height', sectionFeatures.height)
         // .style('fill', '#FFCE00')
@@ -303,7 +304,7 @@ function sectionChart(data) {
         });
 
     // Manually dispach a mouse click event. That will kick-off rendering of the other charts on the dashboard.
-    d3.select('.overlay').dispatch('click')
+    // d3.select('.overlay').dispatch('click')
 
 
     //collect the coordinates of the circles and push the to the data object
@@ -379,7 +380,7 @@ function sectionChart(data) {
     }
 
 // callback for when the mouse moves across the overlay
-    function mouseClickHandler() {
+    function mouseClickHandler(e) {
 
         // get the current mouse position
         const [mx, my] = d3.mouse(this);

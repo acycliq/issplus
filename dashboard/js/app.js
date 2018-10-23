@@ -50,6 +50,18 @@ function splitCharts(myParam) {
         //render now the charts
         var issData = sectionChart(cellData);
         dapiChart(issData, geneData, myParam)
+        landingPoint()
     }
+}
+
+function landingPoint(){
+    var evt = new MouseEvent("click", {
+        view: window,
+        bubbles: true,
+        cancelable: true,
+        clientX: 20,
+        /* whatever properties you want to give it */
+    });
+    document.getElementById('sectionOverlay').dispatchEvent(evt);
 }
 
