@@ -847,6 +847,7 @@ function dapiChart(cellData, geneData, config) {
             opacity: 1,
             fillOpacity: 0.5,
             interactive: false,
+            className: 'circle-transition',
         }).addTo(map);
 
     }
