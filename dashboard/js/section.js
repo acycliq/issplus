@@ -380,7 +380,9 @@ function sectionChart(data) {
     }
 
 // callback for when the mouse moves across the overlay
-    function mouseClickHandler(e) {
+    function mouseClickHandler() {
+        console.log('pageX is: ' + d3.event.pageX)
+        console.log('pageY is: ' + d3.event.pageY)
 
         // get the current mouse position
         const [mx, my] = d3.mouse(this);
