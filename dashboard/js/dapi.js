@@ -821,6 +821,12 @@ function dapiChart(cellData, geneData, config) {
         point = cellFeatures[idx];
 
         console.log("do voronoiHighlight");
+        if(this.voronoiMarker){
+            // that removes the voronoi marker but also the tooltip from the section chart.
+            // Both are created when page first loads
+            this.voronoiMarker.remove();
+            tooltip.style.opacity = 0.0;
+        }
         styleVoronoiMarkers(point);
 
         return point
