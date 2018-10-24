@@ -829,8 +829,8 @@ function dapiChart(cellData, geneData, config) {
     function rectHighlight(e){
         // Look up and interact with section chart
         var cn = point.properties.Cell_Num
-        var xVal = d3.select('#Cell_Num_' + cn).attr('cx')
-        var yVal = d3.select('#Cell_Num_' + cn).attr('cy')
+        var xVal = +d3.select('#Cell_Num_' + cn).attr('cx')
+        var yVal = +d3.select('#Cell_Num_' + cn).attr('cy')
 
         console.log("Styling rect on section chart");
         styleSectionRect(xVal, yVal)
