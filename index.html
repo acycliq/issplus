@@ -370,33 +370,45 @@
                 <h2 class="modal-title">Transcriptomics viewer</h2>
             </div>
             <div class="modal-body">
-                <h2>Lorem ipsum dolor sit amet</h2>
 
-                <h3>Consectetur adipiscing elit</h3>
+                <p>
+                    This online viewer shows a spatial atlas of neuron types in the mouse hippocampus,
+                    based on their combinatorial expression of 99 genes.
+                </p>
 
-                <p><b>Q: Donec quis justo turpis?</b><br>
-                    A: Nulla suscipit eget felis non accumsan. Pellentesque nulla nunc, ultrices posuere imperdiet non, congue ut tellus.</p>
+                <p>
+                    The brain contains hundreds of types of cells, and understanding their organization is an essential
+                    step toward understanding how the brain operates. Each type of cell transcribes a unique combination
+                    of genes from DNA to RNA.
+                    If you know which RNA molecules a cell contains, you can find out what cell type it is.
+                </p>
 
-                <p style="margin-bottom: 0;"><b>Q: Integer eros nulla, luctus vel purus ut, dignissim aliquet purus.?</b><br>
-                    A:  Ut rutrum et ligula at venenatis:</p>
-                <ul>
-                    <li><b>Consequat lorem:</b>  Etiam malesuada nibh nibh.</li>
-                    <li><b>Aenean ac est:</b>  Vivamus luctus ac velit id lobortis. Sed ornare magna lectus, eget tempor nibh pretium in. Integer posuere ex sem, et eleifend lorem eleifend vitae.</li>
-                    <li><b>Morbi fermentum:</b>Pellentesque mollis ligula eget tempor mollis. Nam aliquam tempor cursus. Pellentesque velit quam, tincidunt a justo eget, maximus maximus nulla.</li>
-                </ul>
+                <p>
+                    We used <i>in situ</i> RNA sequencing to map the expression of 99 genes in 28 different sections of mouse
+                    hippocampus – a part of the brain involved in memory, where the subtypes of neurons are understood well.
+                </p>
 
-                <p><b>Q: Aliquam neque odio, aliquet nec purus in, tincidunt commodo ipsum.?</b><br>
-                    A: Donec nunc orci, faucibus id metus non, cursus condimentum justo. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam bibendum vehicula turpis id bibendum. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                <p>
+                    The Gene Map on the left shows where the RNA molecules were detected.
+                    Each colored symbol represents an RNA detection – hover over a symbol to see what gene it represents.
+                    The white blobs show cell nuclei, and the gray dotted lines show their estimated borders.
+                    Hover over a cell to see what genes were assigned to it (they will connect by lines),
+                    and what cell classes it might belong to (in the bottom left corner).
+                    Click on a cell to show even more information, in the lower right panels.
+                </p>
 
-                <h3>De finibus</h3>
-                <p><b>Q: Nec tempor purus porttitor sed?</b><br>
-                    A:  Sed iaculis auctor nisi, ornare suscipit ipsum pulvinar non. Mauris fringilla tellus ut enim condimentum, vel blandit lacus mattis. Nullam mattis dui quis metus faucibus, non vulputate dolor facilisis. Mauris ornare eros diam, ac rhoncus lectus eleifend non. Ut sollicitudin elementum dolor vel mollis.</p>
+                <p>
+                    Use the Section Overview (top right panel) to zoom around – click any cell and it will take you straight there.
+                    To show data from a different experiment, click “Select Data”, in the top left of the window.
+                </p>
 
-                <h3>Morbi venenatis</h3>
-                <p><b>Q: Neque consequat tempor?</b><br>
-                    A: Nam porta efficitur maximus. Vestibulum venenatis magna ac molestie posuere. Phasellus suscipit egestas ipsum, eu tincidunt erat euismod eu:
-                    <a href="http://www.google.com" target="_blank">"Leo ac rutrum convallis"
-                    </a> (Fermentum).
+                <p>
+                    A full explanation of this data and algorithms that produced the atlas is in this
+                    <a href="https://www.biorxiv.org/content/early/2018/10/01/431957" target="_blank"> this paper</a>, where you
+                    can also find details on how to contact us. An explanation of what the different cell types are,
+                    and how we know which RNAs they express,
+                    is in <a href="https://journals.plos.org/plosbiology/article/comments?id=10.1371/journal.pbio.2006387" target="_blank">
+                    this paper</a>.
                 </p>
 
             </div>
@@ -408,61 +420,6 @@
     </div>
 </div>
 
-
-<!-- Modal -->
-<div id="contactUsModal" class="modal fade" role="dialog">
-    <div class="modal-dialog">
-
-        <!-- Modal content-->
-        <div class="modal-content">
-            <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal">&times;</button>
-                <h2 class="modal-title">Contact us</h2>
-            </div>
-            <div class="modal-body">
-                <form id="contact-form" action="http://formspree.io/dimitris.nicoloutsopoulos@gmail.com" method="POST">
-
-                    <div class="form-title">Name:</div>
-                    <input type="text" name="name" placeholder="Enter your name" class="form-field">
-
-                    <div class="form-title">Email:</div>
-                    <input type="email" name="_replyto" placeholder="Enter your email" class="form-field">
-
-                    <div class="form-title">Website:<span style="color:#aaaaaa">(If applicable)</span>:</div>
-                    <input type="url" name="website" placeholder="Enter your website" class="form-field">
-
-                    <div class="form-title">Message:</div>
-                    <textarea name="message" rows="10" placeholder="Enter your message" class="form-field form-message"></textarea>
-
-                    <input type="hidden" name="_subject" value="Website contact" />
-                    <!--<input type="hidden" name="_next" value="//www.google.com/" />-->
-                    <!--<input type="text" name="_gotcha" style="display:none">-->
-
-                    <div class="buttons-container">
-                        <input type="submit" value="Send" class="buttons">
-                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                    </div>
-
-
-                </form>
-            </div>
-            <!--<div class="modal-footer">-->
-                <!--<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>-->
-            <!--</div>-->
-        </div>
-
-    </div>
-</div>
-
-
-
-<!--<div>-->
-    <!--<form action="https://formspree.io/you@email.com">-->
-        <!--<input type="text" name="name">-->
-        <!--<input type="email" name="_replyto">-->
-        <!--<input type="submit" value="Send">-->
-    <!--</form>-->
-<!--</div>-->
 
 <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
     <div class="container-fluid">
@@ -544,8 +501,6 @@
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
                     <li><a data-target="#myModal" data-toggle="modal" href="#myModal">About</a></li>
-                    <li><a data-target="#contactUsModal" data-toggle="modal" href="#contactUsModal">Contact</a></li>
-                    <!--<li><a href="#">Contact</a></li>-->
                 </ul>
             </div><!--/.nav-collapse -->
         </div><!--/.container-fluid -->
