@@ -73,6 +73,14 @@ function section() {
     var renderYAxis = svg.append("g")
         .attr("class", "y axis")
 
+    //Create X grilines
+    var renderXGridline = svg.append("g")
+        .attr("class", "x gridline")
+
+    //Create Y gridlines
+    var renderYGridline = svg.append("g")
+        .attr("class", "y gridline")
+
     // set up axis generating functions
     var xTicks = Math.round(width / 50);
     var yTicks = Math.round(height / 50);
@@ -125,6 +133,8 @@ function section() {
     chartData.height = height;
     chartData.renderXAxis = renderXAxis;
     chartData.renderYAxis = renderYAxis;
+    chartData.renderXGridline = renderXGridline;
+    chartData.renderYGridline = renderYGridline;
     chartData.renderOrder = renderOrder;
     chartData.tsn = tsn;
     chartData.pointRadius = pointRadius;
@@ -241,11 +251,11 @@ function sectionChart(data) {
         .attr("transform", "translate(0, " + h + ")")
         .call(sectionFeatures.axis.x);
 
-    svg.append("g")
+    var xGrid = svg.append("g")
         .attr("class", "grid")
         .call(sectionFeatures.gridlines.x);
 
-    svg.append("g")
+    var yGrid = svg.append("g")
         .attr("class", "grid")
         .call(sectionFeatures.gridlines.y);
 
@@ -326,7 +336,12 @@ function sectionChart(data) {
         sectionFeatures.renderXAxis.call(sectionFeatures.axis.x.scale(d3.event.transform.rescaleX(sectionFeatures.scale.x)));
         sectionFeatures.renderYAxis.call(sectionFeatures.axis.y.scale(d3.event.transform.rescaleY(sectionFeatures.scale.y)));
 
+        xGrid.call(sectionFeatures.gridlines.x.scale(d3.event.transform.rescaleX(sectionFeatures.scale.x)));
+        yGrid.call(sectionFeatures.gridlines.y.scale(d3.event.transform.rescaleY(sectionFeatures.scale.y)));
+
         dotsGroup.attr("transform", d3.event.transform);
+        // xGrid.attr("transform", d3.event.transform);
+        // yGrid.attr("transform", d3.event.transform);
     }
 
 // callback for when the mouse moves across the overlay
