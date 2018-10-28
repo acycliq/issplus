@@ -293,6 +293,7 @@ function donutchart(dataset) {
             donutData.div.style("left", d3.event.pageX + 10 + "px");
             donutData.div.style("top", d3.event.pageY - 25 + "px");
             donutData.div.style("display", "inline-block");
+            donutData.div.style("opacity", 0.8);
             donutData.div.html((this.__data__.data.label) + "<br>" + percentFormat(this.__data__.data.value) );
 
     }
