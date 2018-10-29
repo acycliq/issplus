@@ -115,7 +115,7 @@
 
         #mymap {
             position: relative;
-            height: 800px;
+            height: 790px;
         }
 
 
@@ -350,6 +350,17 @@
             transition: all 0.3s;
         }
 
+        #alignleft {
+            float: left;
+        }
+        #alignright {
+            float: right;
+        }
+        .chromeIcon {
+            position: relative; /* Declared position allows for location changes */
+            top: -2px; /* Moves the image 2px closer to the top of the page */
+        }
+
     </style>
 
 </head>
@@ -416,7 +427,7 @@
                 </p>
 
                 <p>
-                    A full explanation of this data and algorithms that produced the atlas is in this
+                    A full explanation of this data and algorithms that produced the atlas is in
                     <a href="https://www.biorxiv.org/content/early/2018/10/01/431957" target="_blank"> this paper</a>, where you
                     can also find details on how to contact us. An explanation of what the different cell types are,
                     and how we know which RNAs they express,
@@ -595,7 +606,7 @@
                 </div>
 
                 <div class="row">
-                    <div class="col-sm-12">
+
                         <div class="chart-wrapper">
                             <div class="chart-title" id="dtTitle">
                                 Title
@@ -613,7 +624,7 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
+
 
                 </div>
 
@@ -627,7 +638,12 @@
 </div>
 
 <hr>
-<p class="small text-muted">University College London - <a href="http://www.ucl.ac.uk/cortexlab">Cortexlab</a></p>
+
+<div id="footnote" style="margin-top:-15px;">
+    <p class="small text-muted" id="alignleft">University College London - <a href="http://www.ucl.ac.uk/cortexlab">Cortexlab</a></p>
+    <p class="small text-muted" id="alignright">Best viewed with  <img src="./dashboard/data/img/if_chrome_87865.png" class="chromeIcon" alt="Warning!"></p>
+</div>
+<!--<div style="clear: both;"></div>-->
 
 <!--this will stop the preloader after 3sec. (can get rid off the time-out and make it show the webpage when all charts are rendered??)-->
 <script>
