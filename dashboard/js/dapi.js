@@ -57,7 +57,7 @@ function dapi(config) {
         return r;
     }
 
-    var minZoom = 0,
+    var minZoom = getMinZoom(config.name),
         maxZoom = 7;
 
     // The transformation in this CRS maps the the bottom left corner to (0,0) and the top right to (256, 256)
@@ -490,12 +490,10 @@ function dapiChart(cellData, geneData, config) {
     function outsideMap(e){
         resetSectionRect()
         console.log('triggering mouseout event')
-        console.log('Hey dude, where is my car??')
     }
 
     function insideMap(e){
         console.log('triggering mouseover event')
-        console.log('Boys are back in town!!')
 
         // // make sure map is clear of voronoi markers when you enter the map
         // try {
